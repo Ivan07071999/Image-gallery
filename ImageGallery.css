@@ -42,6 +42,7 @@ header {
     position: absolute;
     left: 20%;
     top: 1%;
+    
 
 }
 
@@ -51,6 +52,10 @@ header {
     position: absolute;
     right: 25%;
     top: 2%;
+}
+
+.fastSearch:hover {
+    color: orange;
 }
 
 input {
