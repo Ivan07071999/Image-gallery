@@ -48,8 +48,8 @@ header {
     top: 2%;
 }
 
-#searchImg img:hover {
-    color: orange;
+#glyph:hover {
+  fill: orange
 }
 
 #searchImg {
@@ -76,14 +76,16 @@ input:focus {
   border: 1px solid #DDDDDD;
 }
 
-#searchImg img {
+ #glyph {
+  width: 16px;
+  height: 16px;
   color: black;
   position: absolute;
   cursor: pointer;
-  top: 39%;
-  right: 8%;
+  top: 41%;
+  right: 11%;
   transition: 1s;
-}
+ }
 
 .textContent {
     display: flex;
