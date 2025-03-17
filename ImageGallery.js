@@ -14,8 +14,7 @@ async function getData() {
   try {
     const res = await fetch(`https://api.unsplash.com/search/photos?query=spring&client_id=${clientID}`);
     const data = await res.json();
-    console.log(res);
-    console.log(data)
+
   if (res) {
     showImages = data.results;
     showData();
@@ -51,8 +50,7 @@ if (inpValue.length === 0) {
   url = `https://api.unsplash.com/search/photos?query=spring&client_id=${clientID}`
 } else {
 url = `https://api.unsplash.com/search/photos?query=${inpValue}&client_id=${clientID}`
-}
-console.log(url)
+};
 
 clear()
 
@@ -61,8 +59,6 @@ async function getNewData() {
     try {
   const res = await fetch(url);
   const data = await res.json();
-  console.log(res);
-  console.log(data)
   if (res) {
     bufferArray = data.results;
     showNewData();
@@ -99,24 +95,10 @@ input.addEventListener('mouseenter', function(event) {
 });
 
 
- search.addEventListener('click', newItems);
-// input.addEventListener('keydown', function(e) {
-// if (e.key === 'Enter') {
-//   e.preventDefault()
-//   search.click()
-//   console.log('dsf')
-//  }
-// });
-
-
-// function enterSearch() {
-
-//      if (e.key === 'Enter') {
-//   e.preventDefault()
-//   search.click()
-//      }
-//   }
-
-
-// input.addEventListener('keydown',  enterSearch)
+search.addEventListener('click', newItems);
+document.addEventListener('keydown', function(e) {
+if (e.code === 'Enter') {
+  newItems()
+ }
+});
 
